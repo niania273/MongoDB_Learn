@@ -1,0 +1,39 @@
+use("baticell_store")
+
+//Eliminar todos los documentos de una coleccíon
+db.products.drop()
+
+//Agregar más de un documento
+db.products.insertMany([
+     {
+         _id:1,
+         name: "Xiaomi",
+         price: 2450,
+     },
+     {
+         _id: 2,
+         name: "Motorola",
+         price: 2600
+     },
+     {
+         _id: 3,
+         name: "Samsung",
+         price: 3000
+     }
+])
+
+db.products.insertMany([
+    {
+        name: "Honor",
+        price: 2450,
+        modelo: "Ultra HD"
+    },
+    {
+        _id: 4,
+        name: "Oppo",
+        price: '',
+        color: "verde"
+    }
+])
+
+db.products.find()

@@ -1,20 +1,42 @@
 //Poner en uso una base de datos
-use("sample_mflix")
+//use("sample_mflix")
 
 //Ver la base de datos en uso
-db.getName()
+//db.getName()
 
 //Listar colecciones de la base de datos
-db.getCollectionNames()
+//db.getCollectionNames()
 
 //Listar documentos de una colección
-db.movies.find()
+//db.movies.find()
 
 // ¿Cuántos documentos tiene movies?
-db.movies.find().count()
+//db.movies.find().count()
 
 // Listar documentos a través de una condición
-db.movies.find({countries: "USA"}).count()
+//db.movies.find({countries: "USA"}).count()
 
 //Listar documentos de USA
-db.movies.find({countries: "USA"})
+//db.movies.find({countries: "USA"})
+
+//Empezamos a crear una base de datos
+use ("baticell_store")
+
+//Procedemos a crear una colección producto con un documento
+// db.products.insertOne({ //Definir el documento que va a contener esa colección
+//     name: "Xiaomi",
+//     price: 2750
+// })
+
+//¿El ID siempre será autogenerado?
+//Si no se especifica el ID, siempre será autogenerado
+db.products.insertOne({
+    name: "Honor",
+    price: 2500
+})
+
+//Se mostrará una confirmación
+
+//Todo lo que se pone es lo que se va a ejecutar
+//Listar el documento creado
+db.products.find()
