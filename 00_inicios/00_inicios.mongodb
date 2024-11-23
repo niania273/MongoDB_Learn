@@ -1,0 +1,14 @@
+//Poner en uso una base de datos
+use("sample_mflix")
+
+//Ver la base de datos en uso
+db.getName()
+
+//Listar colecciones de la base de datos
+db.getCollectionNames()
+
+//Listar documentos de una colección
+db.movies.find()
+
+// ¿Cuántos documentos tiene movies?
+db.movies.find().count()
