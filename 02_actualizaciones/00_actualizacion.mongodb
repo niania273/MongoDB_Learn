@@ -1,0 +1,21 @@
+use("baticell_store")
+
+db.products.updateOne(
+    {_id: 1},
+
+    {
+        $set: {name: "iPhone"}
+    }
+)
+
+db.products.updateOne(
+    //Qué documento va a actualizarse
+    {_id: 2},
+
+    //Especificar el nuevo valor a cambiar
+    {
+        $set: {name: "Huawei", price: 2750} //Utilizamos operador para actualizar
+    }
+)
+
+db.products.find()
