@@ -18,4 +18,14 @@ db.products.updateOne(
     }
 )
 
+db.products.updateOne(
+    //Qué documento va a actualizarse
+    {_id: 3},
+
+    //Especificar el nuevo valor a cambiar
+    {
+        $set: {color: "Azul", price: 3150} //Utilizamos operador para actualizar
+    }
+)
+
 db.products.find()
